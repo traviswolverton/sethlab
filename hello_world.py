@@ -11,13 +11,13 @@ def user_dashboard(username):
         print("3. Access Resources")
         print("4. Logout")
 
-        choice == input("Please select an option: ")
+        choice = input("Select an option: ")
 
         if choice == '1':
             view_profile(username)
         elif choice == '2':
             manage_tasks()
-        elif chouce == '3':
+        elif choice == '3':
             access_resources()
         elif choice == '4':
             print("Logging out...")
@@ -27,9 +27,21 @@ def user_dashboard(username):
             print("Invalid option. Please selct a valid choice.")
 
 def view_profile(username):
-    print("Profile Mangemnet for {username}")
-    print("Profile Name: " + {username})
+    print(f"Profile Mangemnet for {username}")
+    print("Profile Name: " + username)
     #more option HERE
+    input("Press Enter to return to the dashboard")
+
+def manage_tasks():
+    print("Task Management: ")
+    print("Task List: (Placeholder)")
+    #more options HERE
+    input("Press Enter to return to the dashboard")
+
+def access_resources():
+    print("Resource Access: ")
+    print("Resources: (Placeholder)")
+    #more options HERE
     input("Press Enter to return to the dashboard")
 
 #input for both username and password
@@ -40,6 +52,7 @@ is_logged_in = (input_username == stored_username) and (input_password == stored
 #what happens if you are logged in or not
 if is_logged_in:
     print("Welcome, " + input_username + "!")
+    user_dashboard(input_username)
 else:
     if input_username != stored_username:
         print("Incorrect username.")
