@@ -5,7 +5,7 @@ stored_username = "sethwolverton514"
 
 def user_dashboard(username):
     while True:
-        print("Welcome," + input_username + "!")
+        print("Welcome," + username + "!")
         print("1. Profile Management")
         print("2. Manage Tasks")        
         print("3. Access Resources")
@@ -27,11 +27,12 @@ def user_dashboard(username):
             print("Invalid option. Please selct a valid choice.")
 
 def view_profile(username):
-    print(f"Profile Mangemnet for {username}")
+    print(f"Profile Manegment for {username}")
     print("Profile Name: " + username)
-    #more option HERE
-    input("Press Enter to return to the dashboard")
-
+    print("Real Name: Seth A. Wolverton")
+    print("Account Created: 3-24-2026")
+    print("Email: sethwolverton514@gmail.com")
+          
 def manage_tasks():
     print("Task Management: ")
     print("Task List: (Placeholder)")
